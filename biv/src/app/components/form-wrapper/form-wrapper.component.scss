@@ -1,0 +1,21 @@
+.wrapper {
+  width: 50%;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 30px;
+  .footer {
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    .button {
+      background-color: #7db100;
+      border: none;
+      color: white;
+      padding: 12px 30px;
+      text-decoration: none;
+      font-size: 16px;
+      border-radius: 10px;
+    }
+  }
+}
