@@ -1,7 +1,10 @@
-<input type="text"
-       [formControl]="phone"
-       placeholder="Your phone number"
-       (blur)="setData()"
-       (focus)="clearMessage()"
->
+<label>
+  <i class="fa fa-mobile"></i>
+  <input type="text"
+         [formControl]="phone"
+         placeholder="Your phone number"
+         (blur)="fullDataService.setPropValue(phone, 'phone')"
+         (focus)="messageService.clear()">
+</label>
+
 

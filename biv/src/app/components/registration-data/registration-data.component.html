@@ -1,3 +1,20 @@
-<p>
-  registration-data works!
-</p>
+<div class="wrapper">
+  <label>
+    <span><i class="fa fa-envelope"></i></span>
+    <input type="text"
+           [formControl]="email"
+           placeholder="Your Email"
+           (blur)="fullDataService.setPropValue(email, 'email')"
+           (focus)="messageService.clear()">
+  </label>
+  <label>
+    <i class="fa fa-lock"></i>
+    <input type="text"
+           [formControl]="password"
+           placeholder="Your Password"
+           (blur)="fullDataService.setPropValue(password, 'password')"
+           (focus)="messageService.clear()">
+  </label>
+</div>
+<app-dropdown [placeholder]="'Your Country'"></app-dropdown>
+

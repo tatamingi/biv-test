@@ -2,9 +2,11 @@
   <div class="wrapper__content">
     <router-outlet></router-outlet>
   </div>
-  <app-message></app-message>
-  <div class="footer">
-    <button class="button" (click)="goBack()">Previous</button>
-    <button class="button" (click)="goForward()">Next</button>
+  <div>
+    <app-message></app-message>
+    <div class="footer">
+      <button class="button" (click)="goBack()">Previous</button>
+      <button class="button" (click)="goForward()">Next</button>
+    </div>
   </div>
 </div>

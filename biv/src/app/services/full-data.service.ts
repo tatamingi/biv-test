@@ -1,33 +1,31 @@
 import { Injectable } from '@angular/core';
 import * as _ from 'lodash';
-import {strictEqual} from "assert";
+import { FormControl } from '@angular/forms';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class FullDataService {
   public fullData = {};
-  private _currentProperty: string;
 
   constructor() { }
 
-  public set currentProperty(prop: string) {
-    this._currentProperty = prop;
-  }
+  public getPropValue = (propName: string): string =>
+    _.isNil(this.fullData[propName]) ? '' : this.fullData[propName]
 
-  public get currentProperty(): string {
-    return this._currentProperty;
-  }
+  public setPropValue = (control: FormControl, propName: string): void => {
+    debugger
+    if (this.fullData[propName] === control.value) { return }
 
-  public get currentPropValue(): string {
-    return this.fullData[this._currentProperty]
-  }
-
-  public setCurrentValue = (value: string): void => {
-    if (!_.isNil(this._currentProperty) && this.fullData[this._currentProperty] === value) { return }
-    this.fullData[this._currentProperty] = value; // toDo: make json writing
+    this.fullData[propName] = _.isNull(control.errors) ? control.value : '';
+    console.log(this.fullData);
   }
 
   public isPropEmpty = (prop: string): boolean =>
     _.isEmpty(this.fullData[prop])
+
+  public getEmptyProperties = () =>
+    Object.keys(this.fullData).filter((key) => _.isEmpty(this.fullData[key]))
+
 }

@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 import { AppComponent } from './app.component';
 import { WizardComponent } from './components/wizard/wizard.component';
@@ -11,6 +12,7 @@ import { DateComponent } from './components/date/date.component';
 import { RegistrationDataComponent } from './components/registration-data/registration-data.component';
 import { FullDataComponent } from './components/full-data/full-data.component';
 import { MessageComponent } from './components/message/message.component';
+import { DropdownComponent } from './components/dropdown/dropdown.component';
 
 @NgModule({
   declarations: [
@@ -21,12 +23,14 @@ import { MessageComponent } from './components/message/message.component';
     DateComponent,
     RegistrationDataComponent,
     FullDataComponent,
-    MessageComponent
+    MessageComponent,
+    DropdownComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AngularFontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

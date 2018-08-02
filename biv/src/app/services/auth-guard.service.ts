@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { CanActivate, RouterStateSnapshot, ActivatedRouteSnapshot } from '@angular/router';
-import {FullDataService} from "./full-data.service";
-import {MessageService} from "./message.service";
+import { FullDataService } from './full-data.service';
+import { MessageService } from './message.service';
+import * as _ from 'lodash';
 
 @Injectable({
   providedIn: 'root'
@@ -15,11 +16,11 @@ export class AuthGuardService implements CanActivate {
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
     debugger
-    const isProperty = !this._fullDataService.isPropEmpty(this._fullDataService.currentProperty);
-    if (isProperty) {
+    const errorFields = this._fullDataService.getEmptyProperties();
+    if (_.isEmpty(errorFields)) {
       return true;
     } else {
-      this._messageService.set('Укажите Ваш мобильный телефон'); //ToDo: исправить сообщение ошибки
+      this._messageService.set(errorFields); //ToDo: исправить сообщение ошибки
       return false;
     }
   }

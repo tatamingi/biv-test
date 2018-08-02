@@ -1,0 +1,22 @@
+:host {
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrapper {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.fa {
+  color: rgba(0,0,0,0.5);
+  font-size: 20px;
+  width: 33px;
+}
+
+label {
+  display: block;
+  &:not(:last-child) {
+    margin-bottom: 43px;
+  }
+}
