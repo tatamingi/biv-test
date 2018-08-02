@@ -1,8 +1,8 @@
 import { Component, Input, OnInit, HostListener, ViewChild, ElementRef } from '@angular/core';
 import { Country } from '../../model/country';
 import { FullDataService } from '../../services/full-data.service';
-import { FormControl, Validators } from '@angular/forms';
-import {MessageService} from "../../services/message.service";
+import { FormControl } from '@angular/forms';
+import { MessageService } from '../../services/message.service';
 
 
 @Component({
@@ -21,18 +21,11 @@ export class DropdownComponent implements OnInit {
   @ViewChild('toggleButton') public toggleButton: ElementRef;
 
   @Input() public placeholder: string;
+  @Input() public countries: Country[];
+
   public visible: boolean;
 
   public country = new FormControl('');
-
-  public countries = [
-    {name: 'Russia', code: 'RU'},
-    {name: 'Russia', code: 'RU'},
-    {name: 'Russia', code: 'RU'},
-    {name: 'Russia', code: 'RU'},
-    {name: 'Russia', code: 'RU'},
-    {name: 'Russia', code: 'RU'}
-  ]
 
   constructor(
     public fullDataService: FullDataService,

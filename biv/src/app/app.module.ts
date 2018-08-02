@@ -13,6 +13,7 @@ import { RegistrationDataComponent } from './components/registration-data/regist
 import { FullDataComponent } from './components/full-data/full-data.component';
 import { MessageComponent } from './components/message/message.component';
 import { DropdownComponent } from './components/dropdown/dropdown.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { DropdownComponent } from './components/dropdown/dropdown.component';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    AngularFontAwesomeModule
+    AngularFontAwesomeModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
