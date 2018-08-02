@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-enum Direction {
+enum Fields {
   phone = 'Phone',
   email = 'Email',
   password = 'Password',
@@ -18,7 +18,7 @@ export class MessageService {
   }
 
   public set(errorFields: string[]) {
-    const fields = errorFields.map((field: string) => Direction[field]).join(', ');
+    const fields = errorFields.map((field: string) => Fields[field]).join(', ');
     this._message = 'Enter your ' + fields;
   }
 
