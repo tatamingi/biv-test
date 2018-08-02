@@ -1,3 +1,7 @@
-<p>
-  phone works!
-</p>
+<input type="text"
+       [formControl]="phone"
+       placeholder="Your phone number"
+       (blur)="setData()"
+       (focus)="clearMessage()"
+>
+

@@ -1,9 +1,9 @@
 <div class="crumbs">
   <ul>
     <li *ngFor="let step of steps">
-      <a href="/{{step.name}}"
-         [ngClass]="{'selected': getCurrentUrl() === '/' + step.name }"
-         (click)="setSelection(step)">{{step.name}}</a>
+      <a routerLink="/{{step.name}}"
+         routerLinkActive="selected"
+      >{{step.name}}</a>
     </li>
   </ul>
 </div>

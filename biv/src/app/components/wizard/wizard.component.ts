@@ -1,6 +1,6 @@
-import {AfterViewInit, Component, OnInit} from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
 import { Step } from '../../model/step';
+import {FullDataService} from "../../services/full-data.service";
 
 
 @Component({
@@ -8,47 +8,32 @@ import { Step } from '../../model/step';
   templateUrl: './wizard.component.html',
   styleUrls: ['./wizard.component.scss']
 })
-export class WizardComponent implements OnInit, AfterViewInit {
+export class WizardComponent {
   public steps = [
     {
       name: 'step1',
-      isValid: false,
-      isSelected: true
+      isValid: false
     },
     {
       name: 'step2',
       isValid: false,
-      isSelected: false
     },
     {
       name: 'step3',
-      isValid: false,
-      isSelected: false
+      isValid: false
     },
     {
       name: 'step4',
-      isValid: false,
-      isSelected: false
+      isValid: false
     }
   ];
 
+
+
   constructor(
-    private _router: Router
+    private _fullDataService: FullDataService
   ) {
   }
 
-  ngOnInit() {
-
-  }
-
-  ngAfterViewInit() {
-    debugger
-  }
-
-  public setSelection = (step: Step): void => {
-    this.steps.forEach((step) => { step.isSelected = false })
-    step.isSelected = true;
-  }
-
-  public getCurrentUrl = (): string => this._router.url;
+  public isPropValid = (prop: string): boolean => !this._fullDataService.isPropEmpty(prop);
 }

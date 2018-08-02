@@ -13,6 +13,9 @@
   .selected:after {
     border-left: 30px solid #5b8200;
   }
+  .valid {
+    background: #7db100;
+  }
 }
 
 .crumbs ul li a {
@@ -56,3 +59,4 @@
 .crumbs ul li:last-child a:after {
   display: none;
 }
+

@@ -6,12 +6,14 @@ import { RegistrationDataComponent } from './components/registration-data/regist
 import { DateComponent } from './components/date/date.component';
 import { FullDataComponent } from './components/full-data/full-data.component';
 
+import { AuthGuardService } from './services/auth-guard.service';
+
 const routes: Routes = [
   { path: '', redirectTo: '/step1', pathMatch: 'full' },
   { path: 'step1', component: PhoneComponent },
-  { path: 'step2', component: RegistrationDataComponent },
-  { path: 'step3', component: DateComponent },
-  { path: 'step4', component: FullDataComponent }
+  { path: 'step2', component: RegistrationDataComponent,canActivate:[AuthGuardService] },
+  { path: 'step3', component: DateComponent, canActivate:[AuthGuardService] },
+  { path: 'step4', component: FullDataComponent, canActivate:[AuthGuardService] }
 ];
 
 

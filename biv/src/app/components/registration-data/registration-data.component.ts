@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {FullDataService} from "../../services/full-data.service";
 
 @Component({
   selector: 'app-registration-data',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegistrationDataComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private _fullDataService: FullDataService
+  ) { }
 
   ngOnInit() {
+    this._fullDataService.currentProperty = 'regData';
   }
 
 }
