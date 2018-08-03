@@ -11,7 +11,7 @@ import { MessageService } from '../../services/message.service';
   styleUrls: ['./phone.component.scss']
 })
 export class PhoneComponent implements OnInit {
-  public phone = new FormControl('', Validators.pattern("[0-9/+]{10,12}"));
+  public phone: FormControl;
 
   constructor(
     public messageService: MessageService,
@@ -19,7 +19,8 @@ export class PhoneComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.phone.setValue(this.fullDataService.getPropValue('phone'));
+    this.phone = new FormControl(this.fullDataService.getPropValue('phone'),
+      Validators.pattern("[0-9/+]{10,12}"));
     this.fullDataService.setPropValue(this.phone, 'phone');
   }
 }

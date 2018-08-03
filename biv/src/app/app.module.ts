@@ -14,6 +14,7 @@ import { FullDataComponent } from './components/full-data/full-data.component';
 import { MessageComponent } from './components/message/message.component';
 import { DropdownComponent } from './components/dropdown/dropdown.component';
 import { HttpClientModule } from '@angular/common/http';
+import { TimerComponent } from './components/timer/timer.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { HttpClientModule } from '@angular/common/http';
     RegistrationDataComponent,
     FullDataComponent,
     MessageComponent,
-    DropdownComponent
+    DropdownComponent,
+    TimerComponent
   ],
   imports: [
     BrowserModule,

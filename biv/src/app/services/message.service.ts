@@ -4,7 +4,11 @@ enum Fields {
   phone = 'Phone',
   email = 'Email',
   password = 'Password',
-  country = 'Country'
+  country = 'Country',
+  days = 'Days',
+  hours = 'Hours',
+  minutes = 'Minutes',
+  seconds = 'Seconds'
 }
 
 @Injectable({
@@ -19,7 +23,7 @@ export class MessageService {
 
   public set(errorFields: string[]) {
     const fields = errorFields.map((field: string) => Fields[field]).join(', ');
-    this._message = 'Enter your ' + fields;
+    this._message = 'Enter ' + fields + ' please';
   }
 
   public clear() {

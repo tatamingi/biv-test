@@ -1,0 +1,33 @@
+.wrapper {
+  width: 100%;
+  height: 135px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrapper__item {
+  display: inline-flex;
+  flex-direction: column;
+  height: 100%;
+  width: 16%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+  border-radius: 10px;
+  .up {
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px
+  }
+  .down {
+    background: #FF561C;
+    border-radius: 0 0 10px 10px;
+    flex-grow: 1;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px
+  }
+}

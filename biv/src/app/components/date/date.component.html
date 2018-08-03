@@ -1,3 +1,24 @@
-<p>
-  date works!
-</p>
+<div class="form-data">
+  <input type="text"
+         [formControl]="days"
+         placeholder="Days"
+         (blur)="handleValue(days, 'days')"
+         (focus)="messageService.clear()">
+  <input type="text"
+         [formControl]="hours"
+         placeholder="Hours"
+         (blur)="handleValue(hours, 'hours')"
+         (focus)="messageService.clear()">
+  <input type="text"
+         [formControl]="minutes"
+         placeholder="Minutes"
+         (blur)="handleValue(minutes, 'minutes')"
+         (focus)="messageService.clear()">
+  <input type="text"
+         [formControl]="seconds"
+         placeholder="Seconds"
+         (blur)="handleValue(seconds, 'seconds')"
+         (focus)="messageService.clear()">
+</div>
+
+<app-timer *ngIf="timerEnabled" [dateStart]="dateStart" [dateEnd]="dateEnd"></app-timer>

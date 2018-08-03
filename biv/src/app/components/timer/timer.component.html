@@ -1,0 +1,6 @@
+<div class="wrapper">
+  <div *ngFor="let item of time | keyvalue" class="wrapper__item">
+    <div class="up">{{item.value}}</div>
+    <div class="down">{{item.key | titlecase}}</div>
+  </div>
+</div>

@@ -10,6 +10,7 @@ import { MessageService } from '../../services/message.service';
   templateUrl: './dropdown.component.html',
   styleUrls: ['./dropdown.component.scss']
 })
+
 export class DropdownComponent implements OnInit {
   @HostListener('document:click', ['$event'])
   handleClick(event: Event) {

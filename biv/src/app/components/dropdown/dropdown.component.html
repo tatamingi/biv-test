@@ -1,7 +1,7 @@
 <div class="wrapper">
   <input type="text"
          [formControl]="country"
-         placeholder="Your Email"
+         placeholder="{{placeholder}}"
          (blur)="fullDataService.setPropValue(country, 'country')"
          (focus)="messageService.clear()">
   <i class="fa fa-caret-down" (click)="toggle()" #toggleButton></i>
