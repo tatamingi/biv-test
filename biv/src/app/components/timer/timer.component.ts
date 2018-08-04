@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { TimeService } from '../../services/time.service';
 import { Time } from '../../model/time';
-import {FullDataService} from "../../services/full-data.service";
+
 
 @Component({
   selector: 'app-timer',
