@@ -2,11 +2,15 @@
   list-style: none;
   padding: 0;
   text-align: center;
+  max-width: 690px;
+  display: flex;
+  margin: 16px auto;
 }
 
 .crumbs ul li {
   display: inline-block;
   margin-right: 10px;
+  flex-grow: 1;
   .selected {
     background: #5b8200;
     &:after {
