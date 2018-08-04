@@ -19,7 +19,7 @@ export class AuthGuardService implements CanActivate {
     if (_.isEmpty(errorFields)) {
       return true;
     } else {
-      this._messageService.set(errorFields); //ToDo: исправить сообщение ошибки
+      this._messageService.set(errorFields);
       return false;
     }
   }

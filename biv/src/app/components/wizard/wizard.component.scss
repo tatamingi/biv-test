@@ -9,12 +9,9 @@
   margin-right: 10px;
   .selected {
     background: #5b8200;
-  }
-  .selected:after {
-    border-left: 30px solid #5b8200;
-  }
-  .valid {
-    background: #7db100;
+    &:after {
+      border-left: 30px solid #5b8200;
+    }
   }
 }
 

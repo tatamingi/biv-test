@@ -28,7 +28,7 @@ export class RegistrationDataComponent implements OnInit {
 
  private initializeControls = (): void => {
     this.email = new FormControl(this.fullDataService.getPropValue('email'), Validators.email);
-    this.password = new FormControl(this.fullDataService.getPropValue('password'), Validators.min(3));
+    this.password = new FormControl(this.fullDataService.getPropValue('password'), Validators.minLength(5));
     this.fullDataService.setPropValue(this.email, 'email');
     this.fullDataService.setPropValue(this.password, 'password');
   }

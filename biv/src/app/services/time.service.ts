@@ -12,14 +12,13 @@ export class TimeService {
   constructor() { }
 
   public getDate = (time?: Time): Date => {
-    let dateStart = new Date();
-    if (_.isNil(time)) { return dateStart }
-
-    dateStart.setDate(dateStart.getDate() + time.days);
-    dateStart.setHours(dateStart.getHours() + time.hours);
-    dateStart.setMinutes(dateStart.getMinutes() + time.minutes);
-    dateStart.setSeconds(dateStart.getSeconds() + time.seconds);
-    return dateStart;
+    let date = new Date();
+    if (_.isNil(time)) { return date }
+    date.setDate(date.getDate() + time.days);
+    date.setHours(date.getHours() + time.hours);
+    date.setMinutes(date.getMinutes() + time.minutes);
+    date.setSeconds(date.getSeconds() + time.seconds);
+    return date;
   }
 
   public countDownTimer = (start: number): Observable<number> =>

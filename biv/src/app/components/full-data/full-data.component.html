@@ -3,9 +3,5 @@
   <div class="item"><span class="item__label">Email</span>{{fields.email}}</div>
   <div class="item"><span class="item__label">Password</span>{{fields.password}}</div>
   <div class="item"><span class="item__label">Country</span>{{fields.country}}</div>
-  <div class="item"><span class="item__label">Time</span>
-    {{fields.days}}
-    {{fields.hours}}
-    {{fields.minutes}}
-    {{fields.seconds}}</div>
+  <div class="item"><span class="item__label">Time</span>{{time | date:'short'}}</div>
 </div>

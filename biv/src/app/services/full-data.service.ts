@@ -19,10 +19,6 @@ export class FullDataService {
     this.fullData[propName] = _.isNull(control.errors) ? control.value : '';
   }
 
-  public isPropEmpty = (prop: string): boolean =>
-    _.isEmpty(this.fullData[prop])
-
   public getEmptyProperties = () =>
     Object.keys(this.fullData).filter((key) => _.isEmpty(this.fullData[key]))
-
 }

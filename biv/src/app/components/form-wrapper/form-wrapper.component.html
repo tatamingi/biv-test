@@ -5,8 +5,12 @@
   <div>
     <app-message></app-message>
     <div class="footer">
-      <button class="button" (click)="goBack()" *ngIf="prevPath">Previous</button>
-      <button class="button right" (click)="goForward()" *ngIf="nextPath">Next</button>
+      <button class="button"
+              (click)="routerPathsService.goBack()"
+              *ngIf="routerPathsService.prevPath">Previous</button>
+      <button class="button right"
+              (click)="routerPathsService.goForward()"
+              *ngIf="routerPathsService.nextPath">Next</button>
     </div>
   </div>
 </div>
