@@ -9,11 +9,11 @@ import { FullDataComponent } from './components/full-data/full-data.component';
 import { AuthGuardService } from './services/auth-guard.service';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/step1', pathMatch: 'full' },
   { path: 'step1', component: PhoneComponent },
   { path: 'step2', component: RegistrationDataComponent,canActivate:[AuthGuardService] },
   { path: 'step3', component: DateComponent, canActivate:[AuthGuardService] },
-  { path: 'step4', component: FullDataComponent, canActivate:[AuthGuardService] }
+  { path: 'step4', component: FullDataComponent, canActivate:[AuthGuardService] },
+  { path: '', redirectTo: '/step1', pathMatch: 'full' }
 ];
 
 

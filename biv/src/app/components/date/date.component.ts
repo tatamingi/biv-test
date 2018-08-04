@@ -34,7 +34,6 @@ export class DateComponent implements OnInit {
 
   public handleValue = (control: FormControl, controlName: string): void => {
     this._fullDataService.setPropValue(control, controlName);
-    debugger
     this._setTimerVisibility();
     this._setData();
   }

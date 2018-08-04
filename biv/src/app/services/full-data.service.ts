@@ -15,11 +15,8 @@ export class FullDataService {
     _.isNil(this.fullData[propName]) ? '' : this.fullData[propName]
 
   public setPropValue = (control: FormControl, propName: string): void => {
-    debugger
     if (this.fullData[propName] === control.value) { return }
-
     this.fullData[propName] = _.isNull(control.errors) ? control.value : '';
-    console.log(this.fullData);
   }
 
   public isPropEmpty = (prop: string): boolean =>

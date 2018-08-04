@@ -15,7 +15,6 @@ export class AuthGuardService implements CanActivate {
   ) { }
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
-    debugger
     const errorFields = this._fullDataService.getEmptyProperties();
     if (_.isEmpty(errorFields)) {
       return true;

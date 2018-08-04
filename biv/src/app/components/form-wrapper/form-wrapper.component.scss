@@ -10,8 +10,6 @@
   justify-content: space-between;
   .footer {
     padding-top: 10px;
-    display: flex;
-    justify-content: space-between;
     .button {
       background-color: #7db100;
       border: none;
@@ -21,6 +19,9 @@
       font-size: 16px;
       border-radius: 10px;
       outline: none;
+      &.right {
+        float: right;
+      }
     }
   }
 }

@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Validators } from '@angular/forms';
 import { FullDataService } from '../../services/full-data.service';
-import * as _ from 'lodash';
 import { MessageService } from '../../services/message.service';
 
 @Component({
